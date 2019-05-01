@@ -1,9 +1,10 @@
 # Pattern.js
-### A lightweight jQuery plugin for pattern selection
 
-Pattern.js is a simple jQuery plugin that lets you select patterns and sizes.
+## General
+
+Pattern.js is a lightweight jQuery plugin that lets you select patterns, sizes and colors.
 The selected item is stored as an attribute in the parent object. The project
-was necessary to realize https://ricecase.com (a POD site that lets you edit any design).
+was necessary to realize https://ricecase.com (POD Editor).
 
 For instance in the case of `<div class="patterns" id="pattern" value="cat.jpg"></div>` the value `cat.jpg` represents the selected item and can be used for further processing.
 

@@ -20,7 +20,7 @@ var runSequence = require('run-sequence');
 var processes   = require('child_process');
 
 
-/* ----- dist tasks ----- */
+/* ----- docs tasks ----- */
 
 var exec = require('child_process').exec;
 var isDebug;
@@ -37,7 +37,7 @@ gulp.task('x-message', function() {
 
 // dev webserver
 gulp.task('x-webserver', function() {
-  gulp.src('dist/')
+  gulp.src('docs/')
     .pipe(webserver({
       livereload: true,
       directoryListing: false,
@@ -64,7 +64,7 @@ gulp.task('x-browserify', function() {
     .on("error", errorHandler)
     .pipe(source('pattern.js'))
     .pipe(buffer())
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('docs/js'));
 });
 
 // compile SASS
@@ -72,46 +72,46 @@ gulp.task('x-sass', function() {
   return gulp.src('scss/*.scss')
     .pipe(sass()
     .on('error', sass.logError))
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('docs/css'));
 });
 
 // copy supporting files
 gulp.task('x-copy', function() {
 
   var images = gulp.src(['images/**/*'])
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('docs/images'));
 
 
   // var css = gulp.src(['src/css/lib/*.css'])
-  //   .pipe(gulp.dest('dist/css'));
+  //   .pipe(gulp.dest('docs/css'));
   //
   // var webfonts = gulp.src(['src/css/webfonts/*'])
-  //   .pipe(gulp.dest('dist/css/webfonts'));
+  //   .pipe(gulp.dest('docs/css/webfonts'));
   //
   // var js = gulp.src(['js/lib/*.js'])
-  //   .pipe(gulp.dest('dist/js/lib'));
+  //   .pipe(gulp.dest('docs/js/lib'));
 
   var html = gulp.src(['html/*'])
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('docs'));
 
   return merge(images, html);
 });
 
 // minify assets
 gulp.task('x-minify', function() {
-  return gulp.src('dist/css/*.css')
+  return gulp.src('docs/css/*.css')
     .pipe(uglifycss({
       "max-line-len": 80
     }))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('docs'));
 });
 
 
 /* ----- user tasks ----- */
 
-// cleanup the dist directory
+// cleanup the docs directory
 gulp.task('clean', function() {
-  return del(['./dist/*']);
+  return del(['./docs/*']);
 });
 
 // lint javascript
@@ -122,7 +122,7 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter('default'));
 });
 
-// // dist production assets
+// // docs production assets
 // gulp.task('prod', function(done) {
 //   isDebug = false;
 //   return runSequence('clean',
