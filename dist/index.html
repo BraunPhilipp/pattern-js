@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern.js</title>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/pattern.css">
+
+  </head>
+  <body>
+
+
+
+
+    <div class="container">
+
+      <div class="title">Pattern.js</div>
+
+      <div class="patterns" id="color" value="#000000">
+        <div class="patterns__menu hidden">
+          <ul>
+          <li><div class="circle very-large white" value="#ffffff"></div></li>
+          <li><div class="circle very-large yellow" value="#ffdd00"></div></li>
+          <li><div class="circle very-large orange" value="#ee8822"></div></li>
+          <li><div class="circle very-large red" value="#dd0011"></div></li>
+          <li><div class="circle very-large purple" value="#8811ff"></div></li>
+          <li><div class="circle very-large blue" value="#0000dd"></div></li>
+          <li><div class="circle very-large green" value="#22aa22"></div></li>
+          <li><div class="circle very-large brown" value="#884400"></div></li>
+          <li><div class="circle very-large black" value="#000000"></div></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="patterns" id="pattern" value="cat.jpg">
+        <div class="patterns__menu hidden">
+          <ul>
+            <li><div value="marble.jpg"><img src="../images/marble.jpg" /></div></li>
+            <li><div value="blur.jpg"><img src="../images/blur.jpg" /></div></li>
+            <li><div value="frosty.jpg"><img src="../images/frosty.jpg" /></div></li>
+            <li><div value="desert.jpg"><img src="../images/desert.jpg" /></div></li>
+            <li><div value="cat.jpg"><img src="../images/cat.jpg" /></div></li>
+            <li><div value="cookie.jpg"><img src="../images/cookie.jpg" /></div></li>
+            <li><div value="leaves.jpg"><img src="../images/leaves.jpg" /></div></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="patterns" id="size" value="10">
+        <div class="patterns__menu hidden">
+          <ul>
+          <li><div class="circle very-large black" value="30"></div></li>
+          <li><div class="circle large black" value="20"></div></li>
+          <li><div class="circle medium black" value="10"></div></li>
+          <li><div class="circle small black" value="5"></div></li>
+          <li><div class="circle very-small black" value="2"></div></li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div><!-- /container -->
+
+
+    <!-- scripts -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/pattern.js"></script>
+    <script type="text/javascript">
+    $(function() {
+      $('.patterns').patternSelect();
+      $("#color").patternSet("#dd0011");
+    });
+    </script>
+
+  </body>
+</html>

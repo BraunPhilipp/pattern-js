@@ -1,0 +1,130 @@
+.patterns {
+  display: inline-block;
+  position: relative;
+}
+.patterns .hidden {
+  display: none;
+}
+.patterns .patterns__menu {
+  position: absolute;
+  z-index: 4;
+  bottom: 80px;
+  left: 20px;
+}
+.patterns__menu ul {
+  list-style: none;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 999px;
+  padding: 5px;
+  width: 40px;
+  margin: 0;
+}
+.patterns__menu ul li,
+.patterns__menu ul li:first-child {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.patterns__menu ul li:last-child {
+  margin-bottom: 0;
+}
+.patterns .patterns__current {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Size selection */
+.patterns .circle {
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+}
+.patterns .circle.very-small {
+  width: 10%;
+  height: 10%;
+  margin: 45%;
+}
+.patterns .circle.small {
+  width: 20%;
+  height: 20%;
+  margin: 40%;
+}
+.patterns .circle.medium {
+  width: 40%;
+  height: 40%;
+  margin: 30%;
+}
+.patterns .circle.large {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+}
+.patterns .circle.very-large {
+  width: 100%;
+  height: 100%;
+}
+
+/* Outline selection */
+.patterns .outline {
+  background: transparent !important;
+  border: 4px solid #000;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+/* Color selection */
+.patterns .white {
+  background: #fff;
+  border-color: #fff;
+}
+.patterns .blue {
+  background: #0000dd;
+  border-color: #0000dd;
+}
+.patterns .red {
+  background: #dd0011;
+  border-color: #dd0011;
+}
+.patterns .green {
+  background: #22aa22;
+  border-color: #22aa22;
+}
+.patterns .black {
+  background: #000;
+  border-color: #000;
+}
+.patterns .yellow {
+  background: #ffdd00;
+  border-color: #ffdd00;
+}
+.patterns .orange {
+  background: #ee8822;
+  border-color: #ee8822;
+}
+.patterns .purple {
+  background: #8811ff;
+  border-color: #8811ff;
+}
+.patterns .brown {
+  background: #884400;
+  border-color: #884400;
+}
+
+/* Image selection */
+.patterns img {
+  width: auto;
+  height: 50px;
+  display: block;
+}
