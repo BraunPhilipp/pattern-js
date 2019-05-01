@@ -1,5 +1,10 @@
 # Pattern.js
 
+## Demo
+
+A working demo can be found at https://braunphilipp.github.io/pattern-js/.
+
+
 ## General
 
 Pattern.js is a lightweight jQuery plugin that lets you select patterns, sizes and colors.
